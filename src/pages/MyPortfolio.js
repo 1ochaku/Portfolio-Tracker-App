@@ -19,8 +19,14 @@ const MyPortfolio = () => {
         },
     ]);
 
-    const addStock = (symbol) => {
-        const newStock = { symbol, name: "New Stock", qty: 1, profitLoss: 0 };
+    const addStock = (stock) => {
+        const newStock = {
+            symbol: stock.symbol,
+            name: stock.name,
+            qty: stock.qty,
+            profitLoss: 0,
+            buyPrice: stock.buyPrice,
+        };
         setStocks([...stocks, newStock]);
     };
 
@@ -29,7 +35,7 @@ const MyPortfolio = () => {
     }
 
     const deleteStock = (symbol) => {
-        setStocks(stocks.filter(stock => stock.symbol != symbol));
+        setStocks(stocks.filter(stock => stock.symbol !== symbol));
     }
 
     return (

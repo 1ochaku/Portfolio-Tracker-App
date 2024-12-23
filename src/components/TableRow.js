@@ -1,4 +1,5 @@
 import React from "react";
+import './TableRow.css';
 
 const TableRow = ({stock, onEdit, onDelete }) => {
     return (
@@ -6,6 +7,8 @@ const TableRow = ({stock, onEdit, onDelete }) => {
             <td>{stock.symbol}</td>
             <td>{stock.name}</td>
             <td>{stock.qty}</td>
+            <td>{stock.buyingPricePerStock}</td>
+            <td>{stock.currentPricePerStock}</td>
             <td>{stock.profitLoss}</td>
             <td>
                 <button onClick={() => onEdit(stock)}>Edit</button>

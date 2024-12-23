@@ -16,9 +16,9 @@ const AddStock = ({ onAddStock }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.name && formData.ticker && formData.qty && formData.buyPrice) {
+        if (formData.name && formData.symbol && formData.qty) {
             onAddStock(formData);
-            setFormData({ name: '', ticker: '', qty: '', buyPrice: '' });
+            setFormData({ name: '', symbol: '', qty: '', buyPrice: '' });
         } else {
             alert("Please fill in all fields");
         }

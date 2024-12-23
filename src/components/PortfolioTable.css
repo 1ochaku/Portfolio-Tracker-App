@@ -3,3 +3,29 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
 }
+
+.portfolio-table th,
+.portfolio-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.portfolio-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.portfolio-table td:nth-child(3),
+.portfolio-table td:nth-child(4) {
+    text-align: right;
+}
+
+.portfolio-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.portfolio-table .actions {
+    text-align: center;
+}
+
