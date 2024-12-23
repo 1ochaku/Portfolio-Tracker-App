@@ -1,42 +1,31 @@
 import React from "react";
+import TableRow from "./TableRow";
 
-const PortfolioTable = ({ data }) => {
+const PortfolioTable = ({ stocks, onEdit, onDelete }) => {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Symbol</th>
-                    <th>Name</th>
-                    <th>Qty</th>
-                    <th>Avg Price</th>
-                    <th>Current Price</th>
-                    <th>Total Paid Price</th>
-                    <th>Total Value</th>
-                    <th>P/L</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((item) => (
-                    <tr key={item.symbol}>
-                        <td>{item.symbol}</td>
-                        <td>{item.name}</td>
-                        <td>{item.qty}</td>
-                        <td>{item.avgPrice}</td>
-                        <td>{item.currentPrice}</td>
-                        <td>{item.totalPaidPrice}</td>
-                        <td>{item.totalValue}</td>
-                        <td style={{ color: item.profitLoss >= 0 ? 'green' : 'red' }}>
-                            {item.profitLoss.toFixed(2)}
-                        </td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </td>
+        <div className="portfolio-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Total Quantity</th>
+                        <th>Current Profit</th>
+                        <th>Actions</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {stocks.map(stock => (
+                        <TableRow
+                            key={stock.symbol}
+                            stock={stock}
+                            onEdit={onEdit}
+                            onDelete={onDelete}
+                        />
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 };
 
