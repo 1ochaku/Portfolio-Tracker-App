@@ -14,3 +14,11 @@ td button {
 td button:hover {
     background-color: #0056b3;
 }
+
+td button:nth-child(2) {
+    background-color: #6c757d;
+}
+
+td button:nth-child(2):hover {
+    background-color: #5a6268;
+}

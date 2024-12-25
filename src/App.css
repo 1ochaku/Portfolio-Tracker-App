@@ -1,8 +1,31 @@
+.App {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .SideBar {
     display: flex;
+    flex: 1;
+    height: 100vh;
+    padding-top: 0;
+    margin-top: 50px;
 }
 
 .Routes {
     flex-grow: 1;
-    padding: 90px 20px 20px;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 200px;
+}
+
+.SideBar {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.SideBar .Routes {
+    padding-left: 20px;
 }

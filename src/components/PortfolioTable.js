@@ -11,7 +11,7 @@ const PortfolioTable = ({ stocks, onEdit, onDelete }) => {
                         <th>Symbol</th>
                         <th>Name</th>
                         <th>Total Quantity</th>
-                        <th>Buying Price per Stock</th>
+                        <th>Avg Buying Price per Stock</th>
                         <th>Current Price per Stock</th>
                         <th>Current Profit</th>
                         <th>Actions</th>

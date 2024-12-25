@@ -30,7 +30,9 @@ const Dashboard = () => {
         <div className="Dashboard">
             <PortFolioSummary data={data} />
             <PerformanceMetrics data={ data} />
-            <PieChart data={data} />
+            <div className="PieChartWrapper">
+                <PieChart data={data} />
+            </div>
         </div>
     );
 }
