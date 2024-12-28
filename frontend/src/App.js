@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import MyPortfolio from './pages/MyPortfolio';
 import EditStock from './components/EditStock';
-import StocksProvider from "./components/StocksProvider";
+import StocksProvider from "./context/StocksProvider";
 
 function App() {
   return (
@@ -32,7 +32,3 @@ function App() {
 
 export default App;
 
-// integrate api
-// fetch (5 default)
-// additionally
-// do we keep it for each individual user??

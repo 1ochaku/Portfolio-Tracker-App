@@ -6,7 +6,7 @@ const AddStock = ({ onAddStock }) => {
         name: '',
         symbol: '',
         qty: '',
-        buyPrice: 'NA', //need to be set through api
+        buyPrice: '',
     });
 
     const handleChange = (e) => {
@@ -16,7 +16,7 @@ const AddStock = ({ onAddStock }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.name && formData.symbol && formData.qty) {
+        if (formData.name && formData.symbol && formData.qty && formData.buyPrice) {
             onAddStock(formData);
             setFormData({ name: '', symbol: '', qty: '', buyPrice: '' });
         } else {
@@ -45,6 +45,14 @@ const AddStock = ({ onAddStock }) => {
                 type="number"
                 placeholder="Quantity"
                 value={formData.qty}
+                onChange={handleChange}
+                required
+            />
+            <input
+                name="buyPrice"
+                type="number"
+                placeholder="Buy Price"
+                value={formData.buyPrice}
                 onChange={handleChange}
                 required
             />

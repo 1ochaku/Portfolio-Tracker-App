@@ -7,8 +7,8 @@ const TableRow = ({stock, onEdit, onDelete }) => {
             <td>{stock.symbol}</td>
             <td>{stock.name}</td>
             <td>{stock.qty}</td>
-            <td>{stock.avgBuyingPricePerStock}</td>
-            <td>{stock.currentPricePerStock}</td>
+            <td>{stock.buyPrice}</td>
+            <td>{stock.currentPrice}</td>
             <td>{stock.profitLoss}</td>
             <td>
                 <button onClick={() => onEdit(stock)}>Edit</button>

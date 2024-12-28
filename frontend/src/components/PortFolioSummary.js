@@ -1,8 +1,8 @@
 import React from "react";
 
-const PortFolioSummary = ({ data }) => {
-    const totalPortfolioValue = data.reduce((sum, stock) => sum + stock.totalValue, 0);
-    const bestPerformer = data.reduce((best, stock) => (stock.profitLoss > best.profitLoss ? stock : best), data[0]);
+const PortFolioSummary = ({ stocks }) => {
+    const totalPortfolioValue = stocks.reduce((sum, stock) => sum + (stock.qty*stock.currentPrice), 0);
+    const bestPerformer = stocks.reduce((best, stock) => (stock.profitLoss > best.profitLoss ? stock : best), stocks[0]);
 
     return (
         <div className="portfolio_summary">

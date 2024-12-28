@@ -7,16 +7,15 @@ import {
   Legend,
 } from 'chart.js';
 
-// Register required chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = ({ data }) => {
+const PieChart = ({ stocks }) => {
   const chartData = {
-    labels: data.map((item) => item.name),
+    labels: stocks.map((item) => item.name),
     datasets: [
       {
-        data: data.map((item) => item.totalValue),
-        backgroundColor: data.map(
+        data: stocks.map((item) => ((item.qty * item.currentPrice) || 0).toFixed(2)), // Round to 2 decimal places
+        backgroundColor: stocks.map(
           () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
         ),
       },

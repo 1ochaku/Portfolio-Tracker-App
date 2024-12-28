@@ -3,7 +3,7 @@ import React from "react";
 import AddStock from "../components/AddStock";
 import PortfolioTable from "../components/PortfolioTable";
 import { useNavigate } from "react-router-dom";
-import { useStocks } from "../components/StocksProvider";
+import { useStocks } from "../context/StocksProvider";
 
 const MyPortfolio = () => {
     const { stocks, addStock, deleteStock } = useStocks();
