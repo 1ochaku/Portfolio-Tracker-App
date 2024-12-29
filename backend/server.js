@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
+// const path = require('path');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const stockRoutes = require('./routes/stockRoutes');
@@ -19,13 +19,13 @@ app.use(express.json());
 app.use('/api', stockRoutes);
 
 // Serve React's static files
-const buildPath = path.join(__dirname, '../frontend/build');
-app.use(express.static(buildPath));
+// const buildPath = path.join(__dirname, '../frontend/build');
+// app.use(express.static(buildPath));
 
 // Catch-All: React Router routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(buildPath, 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(buildPath, 'index.html'));
+// });
 
 // console log when server started
 app.listen(PORT, () => {
