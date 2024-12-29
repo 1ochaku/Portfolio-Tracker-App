@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const StocksContext = createContext();
 
 export const useStocks = () => {
@@ -30,7 +32,7 @@ const StocksProvider = ({ children }) => {
     // fetching the stocks from database via backend
     const fetchStocks = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/stocks");
+            const response = await axios.get(`${API_URL}/api/stocks`);
             // console.log("Fetched stocks:", response.data); 
             const stocksData = response.data;
 
@@ -51,7 +53,7 @@ const StocksProvider = ({ children }) => {
     // fetching the stock price from api
     const fetchStockPrice = async (symbol) => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/stocks-price/${symbol}`);
+            const response = await axios.get(`${API_URL}/api/stocks-price/${symbol}`);
             return response.data;
         } catch (error) {
             console.error(`Error fetching price for ${symbol}:`, error.message);
@@ -62,7 +64,7 @@ const StocksProvider = ({ children }) => {
     // adding new stock to the database
     const addStock = async (newStock) => {
         try {
-            const response = await axios.post("http://localhost:5000/api/stocks", newStock);
+            const response = await axios.post(`${API_URL}/api/stocks`, newStock);
             const updatedStock = await updateStockPriceAndProfitLoss(newStock);
             setStocks((prevStocks) => [...prevStocks, updatedStock]);
         } catch (error) {
@@ -73,7 +75,7 @@ const StocksProvider = ({ children }) => {
     // deleting a stock
     const deleteStock = async (symbol) => {
         try {
-            await axios.delete(`http://localhost:5000/api/stocks/${symbol}`);
+            await axios.delete(`${API_URL}/api/stocks/${symbol}`);
             setStocks((prevStocks) => prevStocks.filter((stock) => stock.symbol !== symbol));
         } catch (error) {
             console.error("Error deleting stock:", error.message);
@@ -83,7 +85,7 @@ const StocksProvider = ({ children }) => {
     // editing a stock
     const editStock = async (updatedStock) => {
         try {
-            const response = await axios.put(`http://localhost:5000/api/stocks/${updatedStock.symbol}`, updatedStock);
+            const response = await axios.put(`${API_URL}/api/stocks/${updatedStock.symbol}`, updatedStock);
             const updatedStockWithPrice = await updateStockPriceAndProfitLoss(updatedStock);
 
             setStocks((prevStocks) =>
