@@ -54,16 +54,17 @@ const deleteStock = async (req, res) => {
 }
 
 // Edit stock
+// Allows editing the stock name, qty and buy price
+// Symbol is not updated as it is with which we are querying
 const editStock = async (req, res) => {
     const { symbol } = req.params;
-    const { name, qty, buyPrice, newSymbol } = req.body;
+    const { name, qty, buyPrice } = req.body;
 
     try {
         const updatedStock = await Stock.findOneAndUpdate(
             { symbol },
             {
-                name, qty, buyPrice, 
-                ...(newSymbol && {symbol: newSymbol}),
+                name, qty, buyPrice,
             },
             { new: true }
         );

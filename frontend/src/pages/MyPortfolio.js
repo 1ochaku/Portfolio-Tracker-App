@@ -6,12 +6,21 @@ import { useNavigate } from "react-router-dom";
 import { useStocks } from "../context/StocksProvider";
 
 const MyPortfolio = () => {
-    const { stocks, addStock, deleteStock } = useStocks();
+    const { stocks, addStock, deleteStock, Loading } = useStocks();
     const navigate = useNavigate();
 
     const editStock = (stock) => {
         navigate(`/edit/${stock.symbol}`);
     };
+
+    // Check if stocks are loading
+    if (Loading) {
+        return (
+            <div className="my-portfolio">
+                <h3>Loading...</h3>
+            </div>
+        );
+    }
 
     return (
         <div className="my-portfolio">

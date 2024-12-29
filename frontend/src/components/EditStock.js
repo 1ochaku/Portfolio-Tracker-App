@@ -64,6 +64,7 @@ const EditStock = () => {
                     type="text"
                     value={formData.symbol}
                     onChange={handleChange}
+                    readOnly
                 />
             </div>
             <div>

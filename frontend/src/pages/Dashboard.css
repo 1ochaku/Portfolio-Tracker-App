@@ -26,3 +26,12 @@
     height: auto;
     margin-top: 20px;
 }
+
+.Empty-Dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f9f9f9;
+}
