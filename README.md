@@ -8,6 +8,21 @@ This provides a basic feature to track the current portfolio value and add/edit/
 2. It enables editing of quantity, name, and buying price.
 3. The buying price is not the real-time price; it's considered as historical data known by the user when adding the stock to the portfolio.
 
+## API Used
+
+- **Finnhub API**: [https://finnhub.io/](https://finnhub.io/)  
+  The application uses this API for real-time stock data.
+
+- **MongoDB**: [https://www.mongodb.com/](https://www.mongodb.com/)  
+  A NoSQL database used for storing portfolio data.
+
+## The project is built using:
+
+- **JavaScript (Node)**: For server-side JavaScript.
+- **React**: For building user interfaces.
+- **Express**: For building the backend server.
+- **MongoDB**: For database storage.
+
 ## How to Use
 
 ### To Clone the Repo:
@@ -23,7 +38,7 @@ cd backend
 npm start
 ```
 
-Ensure you have registered for the **Finhubb API key** and **MongoDB database**.
+Ensure you have registered for the **Finnhub API key** and **MongoDB database**.
 
 ### To Start the Frontend in Another Terminal:
 
@@ -36,18 +51,18 @@ Since the frontend is using the API, change the **stockprovider.js API links** t
 
 ## Screenshots
 
-This is the initial page when the website is loaded and the data is being fetched.
+### This is the initial page when the website is loaded and the data is being fetched.
 
 ![Image 1](./SS/InitialPage.png)
 
-This is the main dashboard showing portfolio details.
+### This is the main dashboard showing portfolio details.
 
 ![Image 2](./SS/Dashboard.png)
 
-This is the my-portfolio page showing portfolio table and add stock feature.
+### This is the my-portfolio page showing portfolio table and add stock feature.
 
 ![Image 3](./SS/My-Portfolio.png)
 
-This is the edit page to make required changes.
+### This is the edit page to make required changes.
 
 ![Image 4](./SS/Edit-Page.png)
