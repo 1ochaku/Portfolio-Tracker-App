@@ -10,6 +10,7 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = ({ stocks }) => {
+  // this displays the contribution of each stock in the portfolio
   const chartData = {
     labels: stocks.map((item) => item.name),
     datasets: [

@@ -9,6 +9,7 @@ const MyPortfolio = () => {
     const { stocks, addStock, deleteStock, Loading } = useStocks();
     const navigate = useNavigate();
 
+    // On editing direct to the edit page
     const editStock = (stock) => {
         navigate(`/edit/${stock.symbol}`);
     };

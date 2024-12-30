@@ -51,18 +51,18 @@ Since the frontend is using the API, change the **stockprovider.js API links** t
 
 ## Screenshots
 
-### This is the initial page when the website is loaded and the data is being fetched.
+This is the initial page when the website is loaded and the data is being fetched.
 
 ![Image 1](./SS/InitialPage.png)
 
-### This is the main dashboard showing portfolio details.
+This is the main dashboard showing portfolio details.
 
 ![Image 2](./SS/Dashboard.png)
 
-### This is the my-portfolio page showing portfolio table and add stock feature.
+This is the my-portfolio page showing portfolio table and add stock feature.
 
 ![Image 3](./SS/My-Portfolio.png)
 
-### This is the edit page to make required changes.
+This is the edit page to make required changes.
 
 ![Image 4](./SS/Edit-Page.png)

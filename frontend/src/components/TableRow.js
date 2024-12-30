@@ -1,7 +1,8 @@
 import React from "react";
 import './TableRow.css';
 
-const TableRow = ({stock, onEdit, onDelete }) => {
+const TableRow = ({ stock, onEdit, onDelete }) => {
+    // structures the content of the rows in the table and show the edit and delete button
     return (
         <tr>
             <td>{stock.symbol}</td>

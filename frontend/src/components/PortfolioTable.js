@@ -3,6 +3,7 @@ import TableRow from "./TableRow";
 import './PortfolioTable.css';
 
 const PortfolioTable = ({ stocks, onEdit, onDelete }) => {
+    // loads the portfolio table
     return (
         <div className="portfolio-table">
             <table>

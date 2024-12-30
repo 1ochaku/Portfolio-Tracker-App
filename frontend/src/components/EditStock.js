@@ -17,6 +17,7 @@ const EditStock = () => {
 
     const navigate = useNavigate();
 
+    // on entering the values, set the value in the form
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -25,6 +26,7 @@ const EditStock = () => {
         }))
     };
 
+    // save it to the database
     const saveChanges = () => {
         if (stock) {
             const updatedStock = {
@@ -44,6 +46,7 @@ const EditStock = () => {
     }
 
     return (
+        // only allows changes in quantity, buying price and name
         <div className="edit-page">
             <h2>Edit Stock</h2>
             <div>

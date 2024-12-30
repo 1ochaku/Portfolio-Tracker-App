@@ -1,6 +1,7 @@
 import React from "react";
 
 const PerformanceMetrics = ({ stocks }) => {
+    // this gives us the avg return of our portfolio
     const averageReturn = stocks.length > 0 
         ? stocks.reduce((sum, stock) => {
             if (stock.qty * stock.buyPrice !== 0) {

@@ -15,10 +15,11 @@ function App() {
         <Header/>
         <div className="SideBar">
           <Sidebar />
-          <div className='Routes'>
+            <div className='Routes'>
+              {/* this routes to the sub-pages in the website */}
               <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />} /> 
                 <Route path="/myportfolio" element={<MyPortfolio/>} />
                 <Route path="/edit/:symbol" element={<EditStock/>}/>
               </Routes> 

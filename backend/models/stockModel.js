@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// this declares the schema of the database
 const StockSchema = new mongoose.Schema({
     symbol: { type: String, required: true },
     name: { type: String, required: true },

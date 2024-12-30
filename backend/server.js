@@ -18,6 +18,7 @@ app.use(express.json());
 // all of the api calls directed here
 app.use('/api', stockRoutes);
 
+// this is enabled when we want to host the app locally
 // Serve React's static files
 // const buildPath = path.join(__dirname, '../frontend/build');
 // app.use(express.static(buildPath));

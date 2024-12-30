@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+// it helps in fetching the stock prices
 const fetchStockPrice = async (symbol) => {
     try {
         const response = await axios.get('https://finnhub.io/api/v1/quote', {
