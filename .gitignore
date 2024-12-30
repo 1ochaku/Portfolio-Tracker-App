@@ -8,8 +8,8 @@ frontend/.env
 /coverage
 
 # production
-frontend/build
-frontend/dist
+build
+dist
 
 # misc
 .DS_Store
